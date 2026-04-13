@@ -3,7 +3,7 @@ import { rolesModern } from "./data/rolesModern";
 import RoleDetail from "./pages/RoleDetail";
 
 export default function App() {
-  const [selectedRole, setSelectedRole] = useState(null);
+const [selectedRole, setSelectedRole] = useState<any>(null);
   const [selectedPhe, setSelectedPhe] = useState(null);
   const [search, setSearch] = useState("");
 
