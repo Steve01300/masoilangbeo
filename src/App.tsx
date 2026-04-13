@@ -89,19 +89,6 @@ const [selectedRole, setSelectedRole] = useState<any>(null);
     "Rình rập - Chờ thời cơ",
   ];
 
-  const changeMode = (direction) => {
-    const currentIndex = modeList.indexOf(mode);
-
-    let newIndex =
-      direction === "next"
-        ? (currentIndex + 1) % modeList.length
-        : (currentIndex - 1 + modeList.length) % modeList.length;
-
-    setMode(modeList[newIndex]);
-    setSelectedPhe(null);
-    setSelectedRole(null);
-  };
-
   const toggleValue = (value, list, setList) => {
     if (list.includes(value)) {
       setList(list.filter((v) => v !== value));
