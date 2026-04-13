@@ -54,7 +54,7 @@ export default function App() {
 
   const [factionCard, setFactionCard] = useState(null);
 
-  const openRoleFromDetail = (roleName) => {
+  const openRoleFromDetail = (roleName: string) => {
     const clean = roleName.replace(/,/g, "").trim();
 
     const found = roles.find((r) => r.name.replace(/,/g, "").trim() === clean);
