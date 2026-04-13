@@ -102,10 +102,9 @@ const filterRef = useRef<HTMLDivElement | null>(null);
 };
 
  const handleClickOutside = (e: MouseEvent) => {
-  if (
-    filterRef.current &&
-    !filterRef.current.contains(e.target as Node)
-  ) {
+  const target = e.target as Node;
+
+  if (filterRef.current && !filterRef.current.contains(target)) {
     setShowFilter(false);
   }
 };
