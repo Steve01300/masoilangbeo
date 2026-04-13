@@ -89,13 +89,17 @@ const [selectedRole, setSelectedRole] = useState<any>(null);
     "Rình rập - Chờ thời cơ",
   ];
 
-  const toggleValue = (value, list, setList) => {
-    if (list.includes(value)) {
-      setList(list.filter((v) => v !== value));
-    } else {
-      setList([...list, value]);
-    }
-  };
+  const toggleValue = <T,>(
+  value: T,
+  list: T[],
+  setList: React.Dispatch<React.SetStateAction<T[]>>
+) => {
+  if (list.includes(value)) {
+    setList(list.filter((v) => v !== value));
+  } else {
+    setList([...list, value]);
+  }
+};
 
   useEffect(() => {
     const handleClickOutside = (e) => {
