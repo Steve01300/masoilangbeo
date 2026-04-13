@@ -4,7 +4,7 @@ import RoleDetail from "./pages/RoleDetail";
 
 export default function App() {
 const [selectedRole, setSelectedRole] = useState<any>(null);
-  const [selectedPhe, setSelectedPhe] = useState(null);
+const [selectedPhe, setSelectedPhe] = useState<string | null>(null);
   const [search, setSearch] = useState("");
 
   const [showLore, setShowLore] = useState(false);
@@ -13,12 +13,12 @@ const [selectedRole, setSelectedRole] = useState<any>(null);
 
   const [showFilter, setShowFilter] = useState(false);
 
-  const [filterDoKho, setFilterDoKho] = useState([]);
-  const [filterHoatDong, setFilterHoatDong] = useState([]);
-  const [filterKyNang, setFilterKyNang] = useState([]);
+  const [filterDoKho, setFilterDoKho] = useState<number[]>([]);
+const [filterHoatDong, setFilterHoatDong] = useState<string[]>([]);
+const [filterKyNang, setFilterKyNang] = useState<string[]>([]);
 
-  const holdTimer = useRef(null);
-  const filterRef = useRef();
+  const holdTimer = useRef<number | null>(null);
+const filterRef = useRef<HTMLDivElement | null>(null);
 
   const pheDescription = {
     "DÂN LÀNG":
