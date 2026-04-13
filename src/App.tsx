@@ -102,7 +102,7 @@ const [selectedRole, setSelectedRole] = useState<any>(null);
 };
 
   useEffect(() => {
-    const handleClickOutside = (e) => {
+    const handleClickOutside = (e: MouseEvent) => {
       if (filterRef.current && !filterRef.current.contains(e.target)) {
         setShowFilter(false);
       }
